@@ -4,18 +4,28 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "SheekWord"
-version = "1.0.0"
+version = "1.0.1"
 description = "Telegram WordSeek Auto Solver Userbot"
 readme = "README.md"
 requires-python = ">=3.8"
+
 authors = [
-  {name = "Rahul Bhai"}
+  { name = "Rahul Bhai" }
 ]
 
 dependencies = [
-  "pyrogram",
-  "tgcrypto"
+  "pyrogram>=1.4,<3.0",
+  "tgcrypto>=1.2"
+]
+
+keywords = ["telegram", "pyrogram", "word-game", "solver", "userbot"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
 ]
 
 [tool.setuptools.packages.find]
 where = ["."]
+include = ["solver*"]
