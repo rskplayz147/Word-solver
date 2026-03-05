@@ -1,10 +1,16 @@
 import asyncio
+import asyncio
 import logging
 import re
 from datetime import datetime
 
 from pyrogram import Client, filters
-from pyrogram.session import StringSession
+
+# Pyrogram v1 + v2 compatibility
+try:
+    from pyrogram.storage import StringSession   # Pyrogram v2
+except ImportError:
+    from pyrogram.session import StringSession   # Pyrogram v1
 
 from .utils import normalize_word, random_delay
 from .words import load_words
