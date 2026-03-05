@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="word-solver",
+    name="SheekWord",
     version="1.0.0",
     author="Rahul Bhai",
     description="Telegram WordSeek Auto Solver Userbot",
